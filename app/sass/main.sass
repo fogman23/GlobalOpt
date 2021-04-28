@@ -2,3 +2,175 @@
 
 // CUSTOM USER STYLES & IMPORTS
 
+.overlay
+    position: absolute
+    top: 0
+    left: 0
+    background-color: rgba(46,46,46,.7)
+    width: 100%
+    height: 100%
+
+.header
+    position: relative
+    z-index: 1
+    background: url('../images/dest/Sec1Bg.jpg') center (center/cover) no-repeat
+    min-height: 680px
+    padding-top: 23px
+    &__list
+        display: flex
+        justify-content: space-between
+        align-items: center
+        list-style-type: none
+        margin: 0
+        padding-left: 35px
+    &__link
+        display: block
+        padding: 0 10px
+        border-right: 1px dashed #858891
+        &:last-child
+            border: none
+        a
+            font-size: 15px
+            color: #fff
+            font-weight: 400
+            &:hover
+                color: $accent
+                text-decoration: none
+                border-bottom: 2px solid $accent
+    &__question
+        color: #fff
+        font-size: 14px
+        font-weight: 300
+        text-align: right
+    &__phone
+        display: block
+        color: #fff
+        font-size: 18px
+        font-weight: 700
+        text-align: right
+        &:hover
+            color: #fff
+    &__btn
+        display: block
+        margin: 0 auto
+        width: 160px
+        height: 45px
+        background-color: $accent
+        border: none
+        border-radius: 45px
+        color: #fff
+        text-transform: uppercase
+        font-size: 12px
+        font-weight: 500
+    &__descr
+        position: relative
+        margin-top: 10px
+        font-size: 24px
+        font-weight: 300
+        color: #fff
+        text-align: center
+    &__title
+        position: relative
+        margin: 0
+        margin-top: 26px
+        color: $accent
+        font-size: 72px
+        line-height: 72px
+        text-transform: uppercase
+        text-align: center
+        font-weight: 700  
+    &__subtitle
+        position: relative
+        margin: 0
+        margin-top: 10px
+        line-height: 42px
+        font-size: 42px
+        font-weight: 400
+        color: #fff
+        text-transform: uppercase
+        text-align: center
+    &__separator
+        position: relative
+        margin: 0 auto
+        margin-top: 38px
+        width: 10px
+        height: 10px
+        background-color: #fff
+        border-radius: 100%
+        &::before
+            content: ''
+            position: absolute
+            top: 50%
+            left: 23px
+            width: 390px
+            height: 1px
+            background-color: #fff
+        &::after
+            content: ''
+            position: absolute
+            top: 50%
+            right: 23px
+            width: 390px
+            height: 1px
+            background-color: #fff
+    &__services
+        margin: 35px 0
+        &__item
+            img
+                display: block
+                margin: 0 auto
+            &__text
+                margin-top: 20px
+                color: #fff
+                font-size: 16px
+                font-weight: 300
+                text-align: center
+    &__btn_payment
+        position: relative
+        width: 230px
+        height: 57px
+        font-size: 15px
+        font-weight: 700
+        border-radius: 57px
+
+.advantages
+    padding: 56px 0
+    background-color: #f3f3f3
+    min-heigh: 590px
+    &__title
+        margin-bottom: 27px
+        font-size: 26px
+        text-align: center
+        color: #2e2e2e
+        text-transform: uppercase
+    &__item
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 35px
+        img
+            margin-right: 15px
+            width: 55px
+        &__title
+            font-size: 16px
+            line-height: 16px
+            color: $accent
+            font-weight: 700
+        &__descr
+            margin-top: 13px
+            font-size: 14px
+            font-weight: 300
+            line-height: 22px
+            color: #3a3a3a
+
+
+
+
+
+
+
+
+
+
+
+
