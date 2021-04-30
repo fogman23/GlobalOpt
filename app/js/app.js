@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	$('.reviews__block').slick({
 		infinite: true,
+		autoplay: true,
+		autoplaySpeed: 2000,
 		centerMode: true,
 		centerPadding: '33%',
 		slidesToShow: 1,
@@ -37,4 +39,27 @@ document.addEventListener("DOMContentLoaded", function() {
 			}
 		]
 	});
+
+	function showBtn (leftBtn, rightBtn) {
+		$(leftBtn).on('click', function() {
+			$(leftBtn).hide();
+			$(rightBtn).hide(50);
+	
+			setTimeout(function() {
+				$(leftBtn).show();
+				$(rightBtn).show();
+			}, 500);
+		});
+		$(rightBtn).on('click', function() {
+			$(leftBtn).hide();
+			$(rightBtn).hide(50);
+	
+			setTimeout(function() {
+				$(leftBtn).show();
+				$(rightBtn).show();
+			}, 500);
+		});
+	}
+
+	showBtn('.slick-prev', '.slick-next');
 });

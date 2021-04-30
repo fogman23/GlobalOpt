@@ -36,6 +36,11 @@
     background: url('../images/dest/Sec1Bg.jpg') center (center/cover) no-repeat
     min-height: 680px
     padding-top: 23px
+    nav
+        position: relative
+        display: flex
+        justify-content: space-between
+        align-items: center
     &__list
         display: flex
         justify-content: space-between
@@ -54,6 +59,7 @@
             color: #fff
             font-weight: 400
             &:hover
+                transition: 0.5s all
                 color: $accent
                 text-decoration: none
                 border-bottom: 2px solid $accent
@@ -122,8 +128,13 @@
             height: 1px
             background-color: #fff
     &__services
+        position: relative
+        display: flex
+        justify-content: space-between
+        align-items: center
         margin: 35px 0
         &__item
+            width: 260px
             img
                 display: block
                 margin: 0 auto
@@ -133,7 +144,6 @@
                 font-size: 16px
                 font-weight: 300
                 text-align: center
-
 
 .title
     margin: 0 0 30px 0
@@ -148,14 +158,21 @@
     padding: 56px 0
     background-color: #f3f3f3
     min-heigh: 590px
-    &__item
+    &__items
         display: flex
         justify-content: space-between
-        align-items: center
+        flex-wrap: wrap
+    &__item
+        display: flex
+        width: 530px
         margin-bottom: 35px
-        img
+        &__img
+            min-width: 68px
             margin-right: 15px
-            width: 55px
+        img
+            display: block
+            margin: 0 auto
+            margin-top: 4px
         &__title
             font-size: 16px
             line-height: 16px
@@ -177,7 +194,6 @@
 .descr
     font-size: 21px
     line-height: 24px
-    margin-bottom: 40px
     text-align: center
     font-weight: 300
     color: #2e2e2e
@@ -186,7 +202,13 @@
     padding: 50px 0
     .title
         margin: 0
+    &__items
+        margin-top: 35px
+        display: flex
+        justify-content: center
     &__item
+        margin: 0 15px
+        max-width: 360px
         img
             width: 100%
         &__title
@@ -238,11 +260,16 @@
 
 .prices
     padding: 50px 0
+    &__items
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
     &__item
+        margin-top: 35px
         padding: 1px
         border: 1px solid #eaeaea
-        width: 265px
-        height: 355px
+        width: 269px
+        min-height: 355px
         img
             display: block
             margin: 14px auto
@@ -357,11 +384,15 @@
         color: #fff        
 
 .schema
-    padding: 50px 0 20px 0
+    padding: 50px 0 25px 0
     background-color: #f3f3f3
+    &__items
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
     &__item
         margin: 0 auto
-        margin-bottom: 30px
+        margin-bottom: 25px
         width: 255px
         img
             display: block
@@ -384,9 +415,12 @@
 .reviews
     padding: 50px 0 65px 0
     &__block
-        width: 1200px
+        max-width: 1200px
+        width: 100%
         margin: 0 auto
+        margin-top: 35px
         &__item
+            width: 650px
             transform: scale(0.55)
             opacity: 0.5
             margin: 0 22px
@@ -394,22 +428,26 @@
             img
                 display: block
                 margin: 0 auto
+                width: 114px
+                height: 114px
             &__title
                 margin-top: 12px
-                font-style: 18px
+                font-size: 18px
                 font-weight: 700
                 color: #3a3a3a
                 text-align: center
             &__descr
-                margin-top: 16px
                 font-size: 14px
+                line-height: 22px
                 font-weight: 300
                 color: #3a3a3a
                 text-align: center
-                width: 120%
-                margin-left: -10%
+                width: 140%
+                margin: 0 -21%
+                margin-top: 16px
 
 .slick-active
+    z-index: 3
     transform: scale(1)
     opacity: 1
     transition: 0.5s all
@@ -421,23 +459,23 @@
         position: absolute
         top: 34px
         left: 50%
-        transform: translateX(-100px)
+        transform: translateX(-112px)
         border: none
         background-color: #fff
     &-next
-        transform: translateX(90px)
+        transform: translateX(94px)
 
 .questions
     position: relative
     z-index: 1
-    height: 438px
+    min-height: 438px
     background: url('../images/dest/Sec9Bg.jpg') center (center/cover) no-repeat
     padding: 62px 0 79px 0
     &__header
         position: relative
         padding: 20px 0
         min-height: 68px
-        width: 896px
+        max-width: 896px
         background-color: #25333c
         margin: 0 auto
     &__title
@@ -459,8 +497,8 @@
         position: relative
         margin: 0 auto
         padding: 17px 33px 25px 33px
-        width: 896px
-        height: 230px
+        max-width: 896px
+        min-height: 230px
         background-color: rgba(212, 213, 216, 0.7)
         input
             width: 270px
@@ -474,10 +512,10 @@
             color: #101010
         textarea
             resize: none
-            margin: 8px 2px 16px 2px
+            margin: 8px 0 16px 0
             padding: 18px 28px 0 28px
             height: 73px
-            width: 825px
+            width: 100%
             border: 1px solid #c9c9c9
             border-radius: 8px
             font-size: 13px
@@ -485,6 +523,7 @@
             color: #101010
 
 iframe
+    display: block
     width: 100%
     height: 500px
     border: none
@@ -493,11 +532,24 @@ iframe
     height: 200px
     background-color: #25333c
     padding-top: 24px
+    &__block
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__block2
+        display: flex
+        justify-content: space-between
+        align-items: center
     &__logo
         display: block
-        width: 100%
+        width: 68px
+        margin: 0 15px
+        img
+            display: block
+            width: 100%
     &__title
-        padding-left: 13px
+        min-width: 680px
+        padding-left: 30px
         font-size: 16px
         font-weight: 700
         color: #fff
@@ -506,29 +558,28 @@ iframe
         width: 100%
         height: 1px
         background-color: rgba(255, 255, 255, 0.3)
-.copyright
-    font-size: 13px
-    font-weight: 300
-    color: #fff
-    opacity: 0.6
-.confidentiality
-    font-size: 13px
-    font-weight: 300
-    text-align: center
-    color: $accent
-    &:hover
+    &__copyright
+        font-size: 13px
+        font-weight: 300
+        color: #fff
+        opacity: 0.6
+    &__confidentiality
+        font-size: 13px
+        font-weight: 300
+        text-align: center
         color: $accent
-.dev
-    font-size: 13px
-    font-weight: 300
-    opacity: 0.6
-    color: #fff
-    text-align: right
-    img
-        margin-left: 10px
+        &:hover
+            color: $accent
+    &__dev
+        font-size: 13px
+        font-weight: 300
+        opacity: 0.6
+        color: #fff
+        text-align: right
+        img
+            margin-left: 10px
 
-
-
+@import media
 
 
 
