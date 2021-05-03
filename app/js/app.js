@@ -1,4 +1,20 @@
 document.addEventListener("DOMContentLoaded", function() {
+	const menu = document.querySelector('.header__list'),
+    menuItem = document.querySelectorAll('.header__link'),
+    hamburger = document.querySelector('.hamburger');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('hamburger_active');
+        menu.classList.toggle('header__list_active');
+    });
+
+    menuItem.forEach(item => {
+        item.addEventListener('click', () => {
+            hamburger.classList.toggle('hamburger_active');
+            menu.classList.toggle('header__list_active');
+        })
+    })
+
 
 	$('.reviews__block').slick({
 		infinite: true,
@@ -23,8 +39,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			breakpoint: 768,
 				settings: {
 					arrows: false,
-					centerMode: true,
-					centerPadding: '33%',
+					centerMode: false,
+					centerPadding: '0px',
 					slidesToShow: 1
 				}
 		  	},
@@ -32,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			breakpoint: 575,
 				settings: {
 					arrows: false,
-					centerMode: true,
+					centerMode: false,
 					centerPadding: '40px',
 					slidesToShow: 1
 				}

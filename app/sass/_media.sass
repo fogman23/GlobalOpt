@@ -1,15 +1,68 @@
-@media (max-width: 991px)
-    .btn
-        width: 160px
-        height: 45px
+@media (max-width: 1200px)
     .header
+        &__contacts
+            display: none
+        &__title
+            font-size: 65px
+            line-height: 65px
+        &__subtitle
+            font-size: 32px
+            line-height: 32px
+        &__services
+            justify-content: space-around
+            &__item
+                width: 220px
+    .advantages
+        &__item
+            width: 445px
+    .work
+        &__item
+            margin-bottom: 25px
+    .footer
+        &__title
+            width: 500px
+    
+@media (max-width: 991px)
+    .header
+        &__logo
+            width: 70px
+            img
+                width: 100%
         &__list
             padding: 0
         &__link
             a
-                font-size: 12px
-        &__contacts
-            display: none
+                font-size: 10px
+        &__descr
+            font-size: 20px
+            line-height: 20px
+        &__title
+            font-size: 48px
+            line-height: 48px
+        &__subtitle
+            font-size: 28px
+            line-height: 28px
+        &__separator
+            &::before
+                width: 325px
+            &::after
+                width: 325px
+        &__services
+            justify-content: space-around
+            &__item
+                margin-top: 20px
+                width: 255px
+                &__text
+                    font-size: 14px
+                    line-height: 18px
+    .advantages
+        &__item
+            width: 100%
+    .consultation
+        &__form
+            input
+                width: 210px
+                margin: 0 2px
     .reviews
         &__block
             width: 95%
@@ -19,4 +72,118 @@
                 width: 200px
             textarea
                 width: 100%
-    
+    .footer
+        &__block
+        
+        &__title
+            width: 260px
+            padding: 0
+            font-size: 14px
+@media (max-width: 767px)
+    .header
+        &__list
+            position: fixed
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            top: 0
+            left: -100%
+            width: 50%
+            height: 100vh
+            padding: 20px 15px
+            background-color: rgba(0,0,0,.8)
+            transition: 0.6s 
+            z-index: 3
+            &_active
+                left: 0
+        &__link
+            padding-right: 0
+            border: none
+            margin: 10px 0
+            a
+                font-size: 20px
+        &__contacts
+            display: block
+            margin: 0 20px
+        &__separator
+            &:before
+                width: 235px
+            &:after
+                width: 235px
+        &__descr
+            font-size: 18px
+        &__title
+            font-size: 35px
+        &__subtitle
+            font-size: 20px
+
+    .hamburger
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+
+        width: 50px
+        height: 50px
+        border-radius: 100%
+        background-color: $accent
+        span
+            display: block
+            height: 2px
+            margin: 3px 0
+            width: 32px
+            background-color: #fff
+            transition: 0.5s all
+        &_active
+            span
+                margin-bottom: -2px 
+                &:nth-child(1)
+                    transform: translateY(0px) rotate(-45deg)
+                &:nth-child(2)
+                    display: none
+                &:nth-child(3)
+                    transform: translateY(-3px) rotate(45deg)
+    .prices
+        &__item
+            width: 240px
+    .consultation
+        &__form
+            input
+                width: 370px
+                margin: 5px 2px
+    .schema
+        &__item
+            width: 240px
+    .reviews
+        &__block
+            &__item
+                &__descr
+                    width: 100%
+                    margin: 0
+    .questions
+        &__form
+            input
+                width: 100%
+                margin: 5px 0
+    .footer
+        &__title
+            display: none
+@media (max-width: 575px)
+    .header
+        &__contacts
+            display: none
+        &__separator
+            display: none
+    .footer
+        &__contacts
+            display: none
+        &__confidentiality
+            display: none
+@media (max-width: 475px)
+    .consultation
+        &__icon
+            top: 80px
+        &__form
+            input
+                margin: 5px 20px                
+

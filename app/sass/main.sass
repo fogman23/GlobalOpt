@@ -12,17 +12,23 @@
 
 .btn
     display: block
-    margin: 0 auto
     width: 160px
     height: 45px
-    background-color: $accent
-    border: none
     border-radius: 45px
-    color: #fff
-    text-transform: uppercase
     font-size: 12px
     font-weight: 500
+    background-color: $accent
+    border: none
+    color: #fff
+    text-transform: uppercase
+    &_call
+        width: 160px
+        height: 45px
+        border-radius: 45px
+        font-size: 12px
+        font-weight: 500
     &_payment
+        margin: 0 auto
         position: relative
         width: 230px
         height: 57px
@@ -35,7 +41,7 @@
     z-index: 1
     background: url('../images/dest/Sec1Bg.jpg') center (center/cover) no-repeat
     min-height: 680px
-    padding-top: 23px
+    padding: 23px 0 82px 0
     nav
         position: relative
         display: flex
@@ -78,15 +84,16 @@
             color: #fff
     &__descr
         position: relative
-        margin-top: 10px
+        margin-top: 8px
         font-size: 24px
+        line-height: 24px
         font-weight: 300
         color: #fff
         text-align: center
     &__title
         position: relative
         margin: 0
-        margin-top: 26px
+        margin-top: 15px
         color: $accent
         font-size: 72px
         line-height: 72px
@@ -96,9 +103,9 @@
     &__subtitle
         position: relative
         margin: 0
-        margin-top: 10px
-        line-height: 42px
+        margin-top: 5px
         font-size: 42px
+        line-height: 42px
         font-weight: 400
         color: #fff
         text-transform: uppercase
@@ -106,7 +113,7 @@
     &__separator
         position: relative
         margin: 0 auto
-        margin-top: 38px
+        margin-top: 45px
         width: 10px
         height: 10px
         background-color: #fff
@@ -130,18 +137,23 @@
     &__services
         position: relative
         display: flex
+        flex-wrap: wrap
         justify-content: space-between
-        align-items: center
-        margin: 35px 0
+        align-items: start
+        margin: 27px 0 33px 0
         &__item
             width: 260px
-            img
-                display: block
-                margin: 0 auto
+            &__img
+                width: 100%
+                height: 70px
+                img
+                    display: block
+                    margin: 0 auto
             &__text
                 margin-top: 20px
                 color: #fff
                 font-size: 16px
+                line-height: 22px
                 font-weight: 300
                 text-align: center
 
@@ -155,7 +167,7 @@
     text-transform: uppercase
 
 .advantages
-    padding: 56px 0
+    padding: 57px 0 51px 0
     background-color: #f3f3f3
     min-heigh: 590px
     &__items
@@ -205,10 +217,10 @@
     &__items
         margin-top: 35px
         display: flex
-        justify-content: center
+        flex-wrap: wrap
+        justify-content: space-around
     &__item
-        margin: 0 15px
-        max-width: 360px
+        width: 350px
         img
             width: 100%
         &__title
@@ -263,8 +275,11 @@
     &__items
         display: flex
         flex-wrap: wrap
-        justify-content: space-between
+        justify-content: space-around
     &__item
+        display: flex
+        flex-direction: column
+        align-items: center
         margin-top: 35px
         padding: 1px
         border: 1px solid #eaeaea
@@ -277,6 +292,7 @@
             padding: 24px 0 22px 0
             font-size: 16px
             line-height: 16px
+            width: 100%
             background-color: #25333c
             color: #fff
             text-align: center
@@ -309,6 +325,7 @@
         display: flex
         justify-content: center
         align-items: center
+        flex-wrap: wrap
         margin-top: 75px
         padding: 65px 0 50px 0
         position: relative
@@ -346,7 +363,7 @@
             margin: 20px auto
     .btn_consultation
         position: absolute
-        top: 244px
+        bottom: -24px
         left: 50%
         transform: translateX(-50%)
 
@@ -496,6 +513,10 @@
     &__form
         position: relative
         margin: 0 auto
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
         padding: 17px 33px 25px 33px
         max-width: 896px
         min-height: 230px
@@ -548,11 +569,26 @@ iframe
             display: block
             width: 100%
     &__title
-        min-width: 680px
+        width: 650px
         padding-left: 30px
         font-size: 16px
         font-weight: 700
         color: #fff
+    &__contacts
+        margin: 0 5px
+    &__question
+        color: #fff
+        font-size: 14px
+        font-weight: 300
+        text-align: right
+    &__phone
+        display: block
+        color: #fff
+        font-size: 18px
+        font-weight: 700
+        text-align: right
+        &:hover
+            color: #fff
     &__divider
         margin: 25px 0 30px 0
         width: 100%
